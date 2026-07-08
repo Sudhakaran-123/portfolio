@@ -5,6 +5,7 @@ import {
   MessageCircle,
   Phone,
   Send,
+  MapPin,
 } from "lucide-react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
@@ -72,26 +73,24 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-[40%_60%] gap-10">
-          {/* Contact Info */}
-          <div className="bg-slate-900/60 backdrop-blur-xl border border-slate-800 rounded-3xl p-8">
-            <h3 className="text-3xl font-bold mb-6">
+        <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-6 lg:gap-10">
+          <div className="bg-slate-900/60 backdrop-blur-xl border border-slate-800 rounded-3xl p-6 sm:p-8">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-6">
               Contact Information
             </h3>
 
-            <p className="text-slate-400 leading-8 mb-10">
+            <p className="text-slate-400 leading-7 sm:leading-8 mb-8 sm:mb-10">
               Feel free to reach out if you're looking for a developer,
               have a project in mind, or simply want to connect.
             </p>
 
-            <div className="space-y-8">
-              {/* Email */}
+            <div className="space-y-6 sm:space-y-8">
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400">
-                  <Mail size={24} />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 flex-shrink-0">
+                  <Mail size={22} />
                 </div>
 
-                <div>
+                <div className="min-w-0">
                   <p className="text-sm text-slate-500">Email</p>
                   <a
                     href="mailto:sudhakaranmani2003@gmail.com"
@@ -102,8 +101,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Phone */}
-              <div className="flex items-center gap-4">
+              {/* <div className="flex items-center gap-4">
                 <div className="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400">
                   <Phone size={24} />
                 </div>
@@ -117,12 +115,11 @@ const Contact = () => {
                     +91 9597718611
                   </a>
                 </div>
-              </div>
+              </div> */}
 
-              {/* Availability */}
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400">
-                  <MessageCircle size={24} />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 flex-shrink-0">
+                  <MessageCircle size={22} />
                 </div>
 
                 <div>
@@ -132,10 +129,20 @@ const Contact = () => {
                   </p>
                 </div>
               </div>
+
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 flex-shrink-0">
+                  <MapPin size={22} />
+                </div>
+
+                <div>
+                  <p className="text-sm text-slate-500">Location</p>
+                  <p className="font-medium">Hosur, Tamil Nadu, India</p>
+                </div>
+              </div>
             </div>
 
-            {/* Social Links */}
-            <div className="flex gap-4 mt-10">
+            <div className="flex flex-wrap gap-4 mt-8 sm:mt-10">
               <a
                 href="https://github.com/Sudhakaran-123"
                 target="_blank"
@@ -156,19 +163,18 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className="bg-slate-900/60 backdrop-blur-xl border border-slate-800 rounded-3xl p-8">
+          <div className="bg-slate-900/60 backdrop-blur-xl border border-slate-800 rounded-3xl p-6 sm:p-8">
             <form
               ref={form}
               onSubmit={sendEmail}
-              className="space-y-5"
+              className="space-y-4 sm:space-y-5"
             >
               <input
                 type="text"
                 name="user_name"
                 placeholder="Your Name"
                 required
-                className="w-full p-4 rounded-xl bg-slate-950 border border-slate-800 focus:border-blue-500 outline-none"
+                className="w-full p-3 sm:p-4 rounded-xl bg-slate-950 border border-slate-800 focus:border-blue-500 outline-none text-sm sm:text-base"
               />
 
               <input
@@ -176,7 +182,7 @@ const Contact = () => {
                 name="user_email"
                 placeholder="Your Email"
                 required
-                className="w-full p-4 rounded-xl bg-slate-950 border border-slate-800 focus:border-blue-500 outline-none"
+                className="w-full p-3 sm:p-4 rounded-xl bg-slate-950 border border-slate-800 focus:border-blue-500 outline-none text-sm sm:text-base"
               />
 
               <input
@@ -184,7 +190,7 @@ const Contact = () => {
                 name="subject"
                 placeholder="Subject"
                 required
-                className="w-full p-4 rounded-xl bg-slate-950 border border-slate-800 focus:border-blue-500 outline-none"
+                className="w-full p-3 sm:p-4 rounded-xl bg-slate-950 border border-slate-800 focus:border-blue-500 outline-none text-sm sm:text-base"
               />
 
               <textarea
@@ -192,7 +198,7 @@ const Contact = () => {
                 rows={6}
                 placeholder="Write your message..."
                 required
-                className="w-full p-4 rounded-xl bg-slate-950 border border-slate-800 focus:border-blue-500 outline-none resize-none"
+                className="w-full p-3 sm:p-4 rounded-xl bg-slate-950 border border-slate-800 focus:border-blue-500 outline-none resize-none text-sm sm:text-base"
               />
 
               <button
@@ -220,13 +226,13 @@ const Contact = () => {
               </button>
 
               {status === "success" && (
-                <div className="bg-green-500/10 border border-green-500 text-green-400 p-4 rounded-xl text-center">
+                <div className="bg-green-500/10 border border-green-500 text-green-400 p-4 rounded-xl text-center text-sm sm:text-base">
                   ✅ Message sent successfully.
                 </div>
               )}
 
               {status === "error" && (
-                <div className="bg-red-500/10 border border-red-500 text-red-400 p-4 rounded-xl text-center">
+                <div className="bg-red-500/10 border border-red-500 text-red-400 p-4 rounded-xl text-center text-sm sm:text-base">
                   ❌ Failed to send message.
                 </div>
               )}

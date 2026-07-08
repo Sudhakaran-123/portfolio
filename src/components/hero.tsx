@@ -105,42 +105,58 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* RIGHT CONTENT */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative">
-              {/* Glow */}
-              <div
-                className="
-                  absolute
-                  -inset-4
-                  bg-gradient-to-r
-                  from-blue-500/20
-                  via-cyan-500/20
-                  to-blue-500/20
-                  blur-2xl
-                  rounded-[30px]
-                "
-              />
+          <div className="relative flex justify-center items-center">
+            <div className="absolute w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
 
-              <img
-                src="/images/profile.jpg"
-                alt="Sudhakaran"
-                className="
-                  relative
-                  w-[250px]
-                  md:w-[300px]
-                  lg:w-[320px]
-                  rounded-[24px]
-                  border
-                  border-slate-800
-                  shadow-2xl
-                  object-cover
-                  transition-all
-                  duration-500
-                  hover:-translate-y-2
-                  hover:scale-[1.02]
-                "
-              />
+            <div
+              className="
+      relative
+      rounded-3xl
+      p-2
+      bg-slate-900/80
+      backdrop-blur-xl
+      border
+      border-slate-800
+      shadow-2xl
+      transition-all
+      duration-500
+      hover:-translate-y-2
+    "
+            >
+              <div className="relative rounded-[22px] overflow-hidden">
+                <img
+                  src="/images/profile2.png"
+                  alt="Sudhakaran"
+                  className="
+          w-[260px]
+          sm:w-[290px]
+          lg:w-[330px]
+          object-cover
+          transition-all
+          duration-500
+          hover:scale-105
+        "
+                />
+
+                {/* Bottom Label */}
+                <div
+                  className="
+          absolute
+          bottom-0
+          left-0
+          right-0
+          bg-gradient-to-t
+          from-black/80
+          via-black/30
+          to-transparent
+          p-6
+        "
+                >
+                  <h3 className="text-white text-xl font-bold">Sudhakaran M</h3>
+
+                  <p className="text-slate-300 text-sm">Full Stack Developer</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
